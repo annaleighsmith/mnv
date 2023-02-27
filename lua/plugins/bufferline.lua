@@ -5,7 +5,7 @@ return {
     opts = {
       options = {
         mode = "tabs", -- tabs or buffers
-        numbers = "buffer_id",
+        numbers = "none",
         diagnostics = "nvim_lsp",
         always_show_bufferline = false,
         separator_style = "slant" or "padded_slant",

@@ -1,11 +1,10 @@
 local opt = vim.opt
-
 opt.formatoptions = "jcroqlnt" -- tcqj
 opt.shortmess:append { W = true, I = true, c = true }
 opt.breakindent = true
 opt.clipboard = "unnamedplus" -- Access system clipboard
 opt.cmdheight = 1
-opt.completeopt = "menuone,noselect"
+opt.completeopt = "menuone,noselect,menu"
 opt.conceallevel = 3
 opt.confirm = true
 opt.cursorline = true

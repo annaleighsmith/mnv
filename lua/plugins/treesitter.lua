@@ -29,7 +29,6 @@ return {
       sync_install = false,
       ensure_installed = {
         "bash",
-        "dockerfile",
         "help",
         "html",
         "lua",
@@ -41,6 +40,16 @@ return {
         "latex",
         "vim",
         "yaml",
+        "comment",
+        "diff",
+        "dot",
+        "make",
+        "javascript",
+        "json",
+        "rust",
+        "python",
+        "json",
+        "jsonc",
       },
       highlight = { enable = true, additional_vim_regex_highlighting = { "org", "markdown" } },
       indent = { enable = true, disable = { "python" } },
@@ -116,6 +125,19 @@ return {
       npairs.setup {
         check_ts = true,
       }
+    end,
+  },
+  {
+    "zbirenbaum/copilot.lua",
+    event = "VeryLazy",
+    config = true,
+  },
+  {
+    "zbirenbaum/copilot-cmp",
+    dependencies = { "zbirenbaum/copilot.lua" },
+    event = "VeryLazy",
+    config = function()
+      require("copilot_cmp").setup()
     end,
   },
 }
